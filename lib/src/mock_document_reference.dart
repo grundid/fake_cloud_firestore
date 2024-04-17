@@ -296,7 +296,9 @@ class MockDocumentReference<T extends Object?>
   }
 
   @override
-  Stream<DocumentSnapshot<T>> snapshots({bool includeMetadataChanges = false}) {
+  Stream<DocumentSnapshot<T>> snapshots(
+      {bool includeMetadataChanges = false,
+      ListenSource source = ListenSource.defaultSource}) {
     return snapshotStreamController.stream.startWith(_getSync());
   }
 
