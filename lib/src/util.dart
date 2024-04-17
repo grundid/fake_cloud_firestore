@@ -76,6 +76,7 @@ dynamic deepCopy(dynamic fromData) {
 void validateDocumentValue(dynamic value) {
   if (value is bool || // Boolean
       value is Blob || // Bytes
+      value is DateTime ||
       value is Timestamp ||
       value is double || // Floating-point number
       value is GeoPoint || // Geographical point
